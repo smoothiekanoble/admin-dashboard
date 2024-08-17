@@ -1,4 +1,235 @@
 * {
-    color: blue;
-    font-size: 100vh;
+    font-family: 'Roboto', serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.white {
+    filter: brightness(0) invert(1);
+}
+
+.pfp {
+    width: 3em;
+    height: 3em;
+    overflow: hidden;
+}
+
+.pfp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10em;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: minmax(8em, 1fr) 5fr;
+    /* border: 1px solid black; */
+    height: 100%;
+}
+
+.left {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 80px 1fr 1fr 1fr;
+    background-color: #60a5fa;
+    color: white;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.home img {
+    margin: .5em;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+    padding: .5em;
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.othertabs{
+    display: grid;
+    align-items: center;
+}
+
+.right {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 6fr;
+    position: relative;
+}
+
+.header {
+    position: sticky; top: 0;
+    display: grid;
+    grid-template-rows: 4fr 5fr;
+    background-color: white;
+    box-shadow: 0px 1px 2px gray; 
+}
+
+.tophalf {
+    display: grid;
+    grid-template-columns: 1.5fr 13fr 1fr 1fr 2fr;
+    align-items: center;
+    gap: 1em;
+}
+
+.tophalf input {
+    width: 70%;
+    height: 2em;
+    background-color: #e2e8eb;
+    border-radius: 10em;
+    padding-left: 1em;
+    border: none;
+}
+
+.tophalf img:nth-of-type(1) {
+    justify-self: end;
+}
+
+.username {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.bottomhalf {
+    display: grid;
+    grid-template: 
+        "pfp hithere new upload share" 3fr 
+        "pfp botuser new upload share" 4fr 
+        / 1fr 8fr 1.5fr 1.5fr 1.5fr;
+    column-gap: 1em;
+    padding: 0 3.5em 0 5em;
+}
+
+.bottomhalf .pfp {
+    grid-area: pfp;
+    width: 4.5em;
+    height: 4.5em;
+    align-self: center;
+    justify-self: end;
+    padding: .4em;
+}
+
+.hithere {
+    grid-area: hithere;
+    font-weight: 700;
+    align-self: end;
+    font-size: .8em;
+}
+
+.botuser {
+    grid-area: botuser;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+button {
+    background-color: #60a5fa;
+    color: white;
+    border: 0;
+    border-radius: 10em;
+    /* align-self: center;
+    justify-self: center; */
+    width: 70%;
+    height: 40%;
+    align-self: center;
+    padding: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomhalf button:nth-of-type(1) {
+    grid-area: new;
+}
+
+.bottomhalf button:nth-of-type(2) {
+    grid-area: upload;
+}
+
+.bottomhalf button:nth-of-type(3) {
+    grid-area: share;
+}
+
+.main {
+    background-color: #e2e8eb;
+    display: grid;
+    grid-template: 
+        "projecttitle announcementtitle" 4em
+        "projects announcements" 1fr
+        "projects tredingtitle" 4em
+        "projects trending" 1fr
+        / 3fr 1fr;
+    padding: 0 2em;
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    gap: 1.2em;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+}
+
+.card {
+    display: grid;
+    background-color: white;
+    border-radius: 1em;
+    grid-template: 
+        [starttitle] "yellow cardtitle . . ." 1fr [endtitle]
+        [startbody] "yellow cardbody cardbody cardbody ." 3fr [endbody]
+        [starticons] "yellow . starplus eyeplus share" 1fr [endicons]
+        / .5em 4fr 1fr 1fr 1fr;
+}
+
+.yellow {
+    background-color: #e4b548;
+    grid-area: yellow;
+}
+
+.cardtitle {
+    grid-area: cardtitle;
+}
+
+.cardbody {
+    grid-area: cardbody;
+}
+
+.card img:nth-of-type(1) {
+    grid-area: starplus;
+}
+
+.card img:nth-of-type(2) {
+    grid-area: eyeplus;
+}
+
+.card img:nth-of-type(3) {
+    grid-area: share;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
