@@ -29,8 +29,9 @@ body {
 .page {
     display: grid;
     grid-template-columns: minmax(8em, 1fr) 5fr;
-    /* border: 1px solid black; */
+    /* border: 10px solid black; */
     height: 100%;
+    position: relative
 }
 
 .left {
@@ -39,6 +40,8 @@ body {
     grid-template-rows: 80px 1fr 1fr 1fr;
     background-color: #60a5fa;
     color: white;
+    position: relative;
+    min-width: 8em;
 }
 
 .home {
@@ -78,7 +81,8 @@ li {
 }
 
 .header {
-    position: sticky; top: 0;
+    position: sticky; 
+    top: 0;
     display: grid;
     grid-template-rows: 4fr 5fr;
     background-color: white;
@@ -268,5 +272,36 @@ button {
     grid-area: trending;
     background-color: white;
     border-radius: .7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    gap: 1em;
+}
 
+.trendingcard {
+    display: grid;
+    grid-template: 
+        "profile tag" 1fr 
+        "profile title" 1fr 
+        / 1fr 5fr;
+    padding: .2em
+}
+
+.profile {
+    grid-area: profile;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10em;
+}
+
+.tag {
+    grid-area: tag;
+    font-weight: bold;
+}
+
+.persontitle {
+    grid-area: title;
+    color: rgb(71, 71, 71);
 }
