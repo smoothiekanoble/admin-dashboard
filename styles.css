@@ -285,7 +285,8 @@ button {
         "profile tag" 1fr 
         "profile title" 1fr 
         / 1fr 5fr;
-    padding: .2em
+    padding: .2em;
+    gap: 0 1em;
 }
 
 .profile {
